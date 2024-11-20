@@ -1,0 +1,180 @@
+/* Portfolio Container */
+.portfolio-container {
+  min-height: 100vh; /* Full height for the container */
+  width: 100%; /* Full width */
+  display: flex; /* Use flexbox for layout */
+}
+
+/* Navigation List */
+.navlist {
+  display: flex; /* Horizontal layout */
+  gap: 3.5rem; /* Space between nav items */
+  justify-content: center; /* Center align nav items */
+  align-items: center; /* Vertically center items */
+  position: fixed; /* Fixed position at the top */
+  width: 100%; /* Full width for nav */
+}
+
+/* Navigation Items */
+.navlist li {
+  list-style: none; /* Remove bullet points */
+}
+
+.navlist li a {
+  text-decoration: none; /* Remove underline */
+  text-transform: uppercase; /* Uppercase text */
+  font-size: 1rem; /* Font size */
+  color: #fff; /* White text color */
+  position: relative; /* Position relative for pseudo-element */
+}
+
+/* Left and Right Containers */
+.left-container,
+.right-container {
+  height: 100vh; /* Full height for both containers */
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center items vertically */
+}
+
+.left-container {
+  background: #262525; /* Dark background */
+  width: 70%; /* 70% width */
+  padding-left: 3rem; /* Left padding */
+}
+
+.right-container {
+  background: linear-gradient(
+    -45deg,
+    #3877ff,
+    #262525 70%
+  ); /* Gradient background */
+  width: 30%; /* 30% width */
+}
+
+/* Icon Styles */
+.icons {
+  display: flex; /* Flex layout */
+  flex-direction: column; /* Column direction */
+  justify-content: center; /* Center icons */
+  align-items: center; /* Center align icons */
+  gap: 3rem; /* Space between icons */
+}
+
+.icons .fa-brands {
+  color: #bbb; /* Light gray color */
+  font-size: 1.7rem; /* Font size for icons */
+}
+
+/* Content Styles */
+.content {
+  margin-left: 4rem; /* Left margin for content */
+}
+
+.content .intro {
+  font-size: 1.5rem; /* Font size for intro text */
+  color: #fff; /* White color */
+}
+
+.content .intro span {
+  color: #3877ff; /* Blue color for highlighted text */
+}
+
+.content h1 {
+  font-size: 4rem; /* Large font size for main heading */
+  color: #5db9ee; /* Light blue color */
+}
+
+.content .detail {
+  font-size: 1.1rem; /* Font size for details */
+  color: #fff; /* White color */
+  max-width: 38rem; /* Max width for detail section */
+  margin: 1.1rem 0 3rem 0; /* Margin around detail section */
+  line-height: 1.8rem; /* Line height for readability */
+}
+
+/* Button Styles */
+.btn-container button {
+  border: 0.1rem solid #5db9ee; /* Border styling */
+  font-size: 1.1rem; /* Font size */
+  padding: 0.8rem 1.5rem; /* Padding for buttons */
+  border-radius: 0.5rem; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition */
+}
+
+button:nth-child(1) {
+  background-color: #5db9ee; /* Background color for first button */
+}
+
+button:nth-child(2) {
+  background-color: blue; /* Background color for second button */
+  color: #5db9ee; /* Light blue text */
+  margin-left: 2rem; /* Margin between buttons */
+}
+
+/* Button Hover Effects */
+button:nth-child(1):hover {
+  background-color: transparent; /* Transparent background on hover */
+  color: #5db9ee; /* Light blue text color */
+}
+
+button:nth-child(2):hover {
+  background-color: transparent; /* Transparent background on hover */
+  color: #5db9ee; /* Light blue text color */
+}
+
+/* Icon Hover Effect */
+.icons .fa-brands:hover {
+  cursor: pointer; /* Pointer cursor on hover */
+  background: linear-gradient(#3877ff, #fff); /* Background gradient on hover */
+  background-clip: text; /* Clip background to text */
+  -webkit-text-fill-color: transparent; /* Fill color transparent */
+}
+
+/* Circle Design */
+.design .circle {
+  aspect-ratio: 1; /* Square aspect ratio */
+  position: absolute; /* Absolute positioning */
+  border-radius: 50%; /* Circular shape */
+  top: 50%; /* Center vertically */
+  left: 70%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center adjustment */
+}
+
+.circle:nth-child(1) {
+  background: linear-gradient(
+    90deg,
+    transparent 50%,
+    #262525 50%
+  ); /* Gradient background */
+  width: 38rem; /* Width of the circle */
+}
+
+.circle:nth-child(2) {
+  width: 30rem; /* Width of the second circle */
+  background-image: url("abhishek pic.jpeg"); /* Background image */
+  background-repeat: no-repeat; /* No repeat for the image */
+  background-size: 100%; /* Size of the background image */
+  border: 1rem solid #fff; /* White border */
+  box-shadow: 0 0 1rem #fff, inset 0 0 1rem #fff, 0 0 10rem #3877ff,
+    inset 0 0 30rem #3877ff, 0 0 12rem #3877ff; /* Box shadow */
+}
+
+/* Navigation Hover Effect */
+.navlist li a::after {
+  content: ""; /* Pseudo-element for hover effect */
+  position: absolute; /* Position absolute for positioning */
+  background-color: #fff; /* White color */
+  width: 100%; /* Full width */
+  height: 0.1rem; /* Thin height */
+  left: 0; /* Align to left */
+  bottom: -5px; /* Position below the link */
+  transform: scaleX(0); /* Initially hidden */
+  transform-origin: bottom right; /* Scale origin */
+  transition: transform 0.5s; /* Transition effect */
+}
+
+.navlist li a:hover::after {
+  transform: scaleX(1); /* Scale to full width on hover */
+  transform-origin: bottom left; /* Change origin on hover */
+}
